@@ -1,0 +1,7 @@
+HEADER    SYNTHETIC TEST FIXTURE - NOT A BIOLOGICAL STRUCTURE
+ATOM      1  N   GLU C   1       8.500   8.000   0.000  1.00 55.00           N
+ATOM      2  CA  GLU C   1       8.000   7.000   0.000  1.00 55.00           C
+ATOM      3  C   GLU C   1       7.500   6.000   0.000  1.00 55.00           C
+ATOM      4  O   GLU C   1       7.000   5.200   0.000  1.00 55.00           O
+ATOM      5  CA  VAL C   2       9.000   7.000   0.000  1.00 55.00           C
+END

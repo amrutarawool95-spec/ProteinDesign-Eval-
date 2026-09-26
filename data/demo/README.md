@@ -1,3 +1,3 @@
-# Demo GPCR data
+# ProteinDesign Insight demo data
 
-The UI seeds a reproducible demonstration of the Human D2R de novo Miniprotein project. In production, this directory holds uploaded FASTA/PDB/mmCIF snapshots and manifests.
+All files in this directory are synthetic test fixtures. They are intentionally labeled illustrative and must not be read as real GPCR structures, predictions, affinities, or experiments.

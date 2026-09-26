@@ -1,39 +1,30 @@
-# ProteinDesign-Eval
+# ProteinDesign Insight
 
-An explainable, research-oriented platform for evaluating and experimentally prioritizing de novo / AI-designed protein candidates.
-
-## MVP
-
-The current build includes a complete seeded demo workflow:
-
-**Upload → QC → Analyze → Visualize → Compare → Prioritize → Export → Experiment → Feedback → Failure Analysis → Learning**
-
-The frontend is a React + TypeScript + Vite app. The backend is a FastAPI service boundary with modular Python analysis contracts in `analysis/`.
+ProteinDesign Insight is a deployable Streamlit MVP for transparent computational triage of AI-designed and de novo protein candidates. It is designed around a target → candidate → analysis → prioritization → experiment → feedback loop and keeps computed/model-derived values distinct from experimental observations.
 
 ## Run
 
 ```bash
-npm install
-npm run dev
+pip install -r requirements.txt
+streamlit run app.py --server.address 0.0.0.0 --server.port 8501
 ```
 
-Optional API:
+The application uses SQLite at `data/protein_design_insight.db` and creates the database on first run. No API keys are required.
 
-```bash
-uvicorn backend.main:app --reload
-```
+## Scientific scope
 
-## Scientific integrity
+The included demo project is synthetic and illustrative. Its sequences and coordinate files are test fixtures, not biological claims or experimental evidence. The application only reports metrics it can calculate from supplied inputs; unavailable values remain unavailable. Priority scores are for experimental testing triage, not predictions of binding success.
 
-Every result is intended to be labeled as `Calculated`, `Model-derived`, `Experimental`, or `Unavailable`. The priority score is a transparent computational ranking, not an experimental success probability. Failure analysis is association-only until validated with sufficient data.
+The current analysis engine supports FASTA and lightweight PDB/mmCIF parsing, sequence metrics, coordinate-based structure QC, interface contacts, pairwise target/off-target comparisons when structures are available, state comparisons, sequence clustering, transparent weighted ranking, feedback import, failure summaries, project exports, and PDF reports. The module boundaries are intentionally independent from the Streamlit UI so heavier structure predictors or external model runners can be added later.
 
-## Repository structure
+## Layout
 
-- `frontend` — reserved for a future extracted frontend package; MVP UI currently lives in `src/`
-- `backend` — FastAPI routes for projects, targets, candidates, analyses, feedback, datasets, reports, and exports
-- `analysis` — modular Python analysis and ranking contracts
-- `data/demo` — reserved for project seed files
-- `data/schemas` — reserved for input schemas
-- `tests` — reserved for API and scientific unit tests
-- `docs` — reserved for methodology notes
-- `scripts`, `notebooks`, `docker` — extension points for production workflows
+- `app.py`: Streamlit entry point and workflow shell
+- `core/`: storage, validation, sequence/structure/interface/specificity/conformation/diversity/ranking/feedback/report logic
+- `pages/`: Streamlit navigation wrappers
+- `data/demo/`: clearly labeled synthetic demo project
+- `tests/`: unit tests for validation, parsing, scoring, clustering, feedback, reports, and malformed data
+
+## Limitations
+
+No docking, molecular dynamics, AlphaFold/ESMFold inference, or wet-lab interpretation is bundled. pLDDT and PAE are shown only when supplied as metadata. Hydrogen bonds and salt bridges are geometric heuristics and should be treated as calculated indicators, not proof of interaction.

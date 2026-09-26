@@ -1,0 +1,10 @@
+HEADER    SYNTHETIC TEST FIXTURE - NOT A BIOLOGICAL STRUCTURE
+ATOM      1  N   ALA T   1       0.000   0.000   0.000  1.00 70.00           N
+ATOM      2  CA  ALA T   1       1.400   0.000   0.000  1.00 70.00           C
+ATOM      3  C   ALA T   1       2.100   1.300   0.000  1.00 70.00           C
+ATOM      4  O   ALA T   1       1.600   2.400   0.000  1.00 70.00           O
+ATOM      5  N   ASP T   2       3.300   1.200   0.000  1.00 65.00           N
+ATOM      6  CA  ASP T   2       4.100   2.300   0.000  1.00 65.00           C
+ATOM      7  C   ASP T   2       5.500   1.900   0.000  1.00 65.00           C
+ATOM      8  O   ASP T   2       6.000   0.800   0.000  1.00 65.00           O
+END

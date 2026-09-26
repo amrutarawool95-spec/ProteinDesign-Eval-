@@ -1,0 +1,6 @@
+candidate_id,sequence,design_method,generation_round,structure_format
+PD-001,ACDEFGHIKLMNPQRSTVWYACDEFGHIKLMN,ProteinMPNN illustrative round,1,pdb
+PD-002,AVILMFWYAVILMFWYACDEFGHIKLMNPQRS,Diffusion illustrative round,2,pdb
+PD-003,KKRDEACDEFGHIKLMNPQRSTVWYGGSSAA,De novo illustrative round,2,pdb
+PD-004,ACDEFGHIKLMNPQRSTVWYACDEFGHIKLMN,ProteinMPNN illustrative round,3,pdb
+PD-005,GGSSAAACDEFGHIKLMNPQRSTVWYVVVVVV,Diffusion illustrative round,3,pdb
